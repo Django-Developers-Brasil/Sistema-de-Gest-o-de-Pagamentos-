@@ -1,4 +1,4 @@
 from django.shortcuts import render, HttpResponse
 
-def example_view(request):
+def index(request):
     return HttpResponse('OK')
