@@ -20,5 +20,5 @@ from webpage import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.example_view),
+    path('', views.index, name='index'),
 ]
