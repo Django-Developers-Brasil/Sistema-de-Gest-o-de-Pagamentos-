@@ -1,4 +1,19 @@
 asgiref==3.8.1
+colorama==0.4.6
 Django==4.2.15
+django-js-asset==2.2.0
 sqlparse==0.5.1
 tzdata==2024.1
+
+# https://github.com/theskumar/python-dotenv
+ python-dotenv==1.0.1
+
+# https://pypi.org/project/django-ckeditor/
+# https://github.com/django-ckeditor/django-ckeditor
+django-ckeditor==6.7.1
+
+# https://pypi.org/project/pretty-errors/
+pretty-errors==1.2.25
+
+# https://pypi.org/project/uv/
+uv==0.4.6
