@@ -127,19 +127,22 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# WINDOWS
+
+# LINUX - Use as vars static dirs e root abaixo no Linux
+# STATIC_DIRS = [
+#     BASE_DIR / 'static',
+# ]
+
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# WINDOWS - Use as vars static dirs e root abaixo no Windows
 STATIC_DIRS = [
     BASE_DIR, 'static',
 ]
 
 # STATIC_ROOT = BASE_DIR, 'staticfiles'
 
-# LINUX
-# STATIC_DIRS = [
-#     BASE_DIR / 'static',
-# ]
 
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 # Media Files
