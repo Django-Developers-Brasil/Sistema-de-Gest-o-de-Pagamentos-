@@ -27,8 +27,8 @@ load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -127,11 +127,22 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+
+# LINUX - Use as vars static dirs e root abaixo no Linux
+# STATIC_DIRS = [
+#     BASE_DIR / 'static',
+# ]
+
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# WINDOWS - Use as vars static dirs e root abaixo no Windows
 STATIC_DIRS = [
-    BASE_DIR / 'static',
+    BASE_DIR, 'static',
 ]
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATIC_ROOT = BASE_DIR, 'staticfiles'
+
+
 
 
 # Media Files
