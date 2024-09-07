@@ -9,3 +9,9 @@ def Error(request):
 def index(request):
     return render(request,'index.html')
 
+
+def terms_of_service(request):
+    return render(request, 'terms_of_service.html')
+
+
+
