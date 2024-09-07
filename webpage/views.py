@@ -5,3 +5,7 @@ def index(request):
 
 def Error(request):
     return render(request,'404.html')
+
+def index(request):
+    return render(request,'index.html')
+
