@@ -88,15 +88,22 @@
    ```plaintext
     SECRET_KEY=sua_chave_secreta_aqui
     ```
+8. **DEBUG no .env**
 
-8. **Execute as migrações do banco de dados**:
+    Adicione ao .env:
+    ```python
+    DEBUG = True
+    # DEBUG = False
+    ```
+
+9. **Execute as migrações do banco de dados**:
 
     ```bash
     python manage.py migrate
     ```
     O comando acima criará no diretório raiz o banco de dados db.sqlite3 com o esquema de tabelas do Django
 
-9. **Crie um superusuário para acessar o Django Admin**:
+10. **Crie um superusuário para acessar o Django Admin**:
 
     ```bash
     python manage.py createsuperuser
@@ -114,7 +121,7 @@
 
 
 
-10. **Execute o servidor de desenvolvimento**:
+11. **Execute o servidor de desenvolvimento**:
     ```bash
     python manage.py runserver
     ```
