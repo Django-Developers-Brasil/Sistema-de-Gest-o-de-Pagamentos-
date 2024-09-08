@@ -34,16 +34,25 @@
 </head>
 
 <body>
+    
     <!-- Spinner Start -->
-    {% include 'base_template-content/spinner.html' %}
+    {% include 'base_template-components/spinner.html' %}
     <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    {% include 'base_template-components//Topbar.html' %}
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    {% include 'base_template-components//Navbar.html' %}
+    <!-- Navbar End -->
 
         {% block content %}
         
         {% endblock %}
 
     <!-- Footer Start -->
-    {% include 'base_template-content/Footer.html' %}
+    {% include 'base_template-components/Footer.html' %}
     <!-- Footer End -->
 
     <!-- Back to Top -->
