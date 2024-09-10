@@ -21,23 +21,23 @@
 
    **Windows**
     ```bash
-     python -m venv myvenv  # Windows
+     python -m venv myvenv  
     ```
       **Linux**
      ```bash
-     python3 -m venv myvenv  # Linux
+     python3 -m venv myvenv  
     ```
 
 3. **Ative o ambiente virtual criado**:
 
    **Windows**
     ```bash
-    myvenv\Scripts\activate  # Windows
+    myvenv\Scripts\activate  
     ```
 
      **Linux**
     ```bash
-    source myvenv/bin/activate  # Linux
+    source myvenv/bin/activate  
     ```
 
 4. **Acesse a pasta do projeto Django**:
@@ -52,7 +52,7 @@
 
     **Instalação via gerenciador de dependências PIP**
     ```bash
-    pip install django==4.2.15 python-dotenv uv pretty-errors django-ckeditor
+    pip install django==4.2.15 python-dotenv uv pretty-errors django-ckeditor django-colorfield
     ```
     ----- **OU** -----
 
