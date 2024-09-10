@@ -21,23 +21,23 @@
 
    **Windows**
     ```bash
-     python -m venv myvenv  # Windows
+     python -m venv myvenv  
     ```
       **Linux**
      ```bash
-     python3 -m venv myvenv  # Linux
+     python3 -m venv myvenv  
     ```
 
 3. **Ative o ambiente virtual criado**:
 
    **Windows**
     ```bash
-    myvenv\Scripts\activate  # Windows
+    myvenv\Scripts\activate  
     ```
 
      **Linux**
     ```bash
-    source myvenv/bin/activate  # Linux
+    source myvenv/bin/activate  
     ```
 
 4. **Acesse a pasta do projeto Django**:
@@ -52,7 +52,7 @@
 
     **Instalação via gerenciador de dependências PIP**
     ```bash
-    pip install django==4.2.15 python-dotenv uv pretty-errors django-ckeditor
+    pip install django==4.2.15 python-dotenv uv pretty-errors django-ckeditor django-colorfield
     ```
     ----- **OU** -----
 
@@ -103,6 +103,7 @@
     ```
     O comando acima criará no diretório raiz o banco de dados db.sqlite3 com o esquema de tabelas do Django
 
+
 10. **Crie um superusuário para acessar o Django Admin**:
 
     ```bash
@@ -120,14 +121,35 @@
     Isso carregará os dados do superusuário armazenados no fixture `superuser_fixture.json`. O superuser é **admin** e a senha é **root**
 
 
-
-11. **Execute o servidor de desenvolvimento**:
+11. **Carrege no DB os dados do model da landing page**:
+    
     ```bash
+    python manage.py loaddata landing_page_fixture.json
+    ```
+
+
+12. **Execute o servidor de desenvolvimento**:
+
+    ```python
     python manage.py runserver
     ```
 
-### Acesse no seu navegador os endereços a seguir:
+13. **Acesse no seu navegador os endereços a seguir**:
 
-[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+    [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-[http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+    [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+
+
+### Se tiver problemas com o cache (atualização da página):
+
+    ```python
+    python manage.py collectstatic
+    ```
+
+
+    ```python
+    python manage.py shell
+    from django.core.cache import cache
+    cache.clear()
+    ```

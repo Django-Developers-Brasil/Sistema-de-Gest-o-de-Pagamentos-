@@ -1,3 +1,4 @@
+
 asgiref==3.8.1
 colorama==0.4.6
 Django==4.2.15
@@ -17,3 +18,6 @@ pretty-errors==1.2.25
 
 # https://pypi.org/project/uv/
 uv==0.4.6
+
+#  https://github.com/fabiocaccamo/django-colorfield
+django-colorfield==0.11.0
