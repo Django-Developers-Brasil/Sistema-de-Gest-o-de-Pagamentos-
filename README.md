@@ -103,6 +103,7 @@
     ```
     O comando acima criará no diretório raiz o banco de dados db.sqlite3 com o esquema de tabelas do Django
 
+
 10. **Crie um superusuário para acessar o Django Admin**:
 
     ```bash
@@ -120,14 +121,35 @@
     Isso carregará os dados do superusuário armazenados no fixture `superuser_fixture.json`. O superuser é **admin** e a senha é **root**
 
 
-
-11. **Execute o servidor de desenvolvimento**:
+11. **Carrege no DB os dados do model da landing page**:
+    
     ```bash
+    python manage.py loaddata landing_page_fixture.json
+    ```
+
+
+12. **Execute o servidor de desenvolvimento**:
+
+    ```python
     python manage.py runserver
     ```
 
-### Acesse no seu navegador os endereços a seguir:
+13. **Acesse no seu navegador os endereços a seguir**:
 
-[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+    [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-[http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+    [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+
+
+### Se tiver problemas com o cache (atualização da página):
+
+    ```python
+    python manage.py collectstatic
+    ```
+
+
+    ```python
+    python manage.py shell
+    from django.core.cache import cache
+    cache.clear()
+    ```
