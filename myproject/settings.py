@@ -147,3 +147,28 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+import os
+
+# Define o caminho do arquivo de log no diretório root
+LOG_FILE_PATH = os.path.join(BASE_DIR, 'error.log')
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'ERROR',  # Apenas erros serão registrados
+            'class': 'logging.FileHandler',
+            'filename': LOG_FILE_PATH,
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
