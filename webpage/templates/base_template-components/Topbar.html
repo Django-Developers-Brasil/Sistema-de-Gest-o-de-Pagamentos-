@@ -8,19 +8,19 @@
             </div>
             <div class="h-100 d-inline-flex align-items-center py-3">
                 <small class="far fa-clock text-primary me-2"></small>
-                <small>Seg a Sex: das 7h às 19h | Sábado: das 7h às 13h</small>
+                <small>Seg a Sex: {{ carserv.working_hours_weekdays|lower }} | Sábado: {{ carserv.working_hours_saturday|lower }}</small>
             </div>
         </div>
         <div class="col-lg-5 px-5 text-end">
             <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                 <small class="fa fa-phone-alt text-primary me-2"></small>
-                <small>(83) 9.1234-1234</small>
+                <small>(83) {{ carserv.phone }}</small>
             </div>
             <div class="h-100 d-inline-flex align-items-center">
-                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1" href="{{ carserv.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1" href="{{ carserv.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1" href="{{ carserv.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-0" href="{{ carserv.instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </div>
