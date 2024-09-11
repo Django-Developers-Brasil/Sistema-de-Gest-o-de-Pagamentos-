@@ -5,21 +5,21 @@
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">localização</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Rua 123 João Pessoa-PB</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(83) 9.1234-1234</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>contato@django.dev.br</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(83) {{ carserv.phone }}</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>{{ carserv.email }}</p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="{{ carserv.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="{{ carserv.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="{{ carserv.youtube }}" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="{{ carserv.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Horário de Funcionamento</h4>
                 <h6 class="text-light">Seg - Sex:</h6>
-                <p class="mb-4">das 7h às 19h</p>
+                <p class="mb-4">{{ carserv.working_hours_weekdays|lower }}</p>
                 <h6 class="text-light">Sábados:</h6>
-                <p class="mb-0">das 7h às 13h</p>
+                <p class="mb-0">{{ carserv.working_hours_saturday|lower }}</p>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Services</h4>
@@ -33,7 +33,7 @@
                 <h4 class="text-light mb-4">Newsletter</h4>
                 <p>Cadastre seu email e fique por dentro das novidades e ofertas</p>
                 <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Seu email">
                     <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Inscrever-me</button>
                 </div>
             </div>
@@ -50,8 +50,8 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
-                        <a href="https://policies.google.com/privacy" target="_blank" title="Privacy Policy">Política de Privacidade</a>
-                        <a href="https://policies.google.com/terms">Termos de Serviço</a>
+                        <a href="{{ carserv.privacy_policy }}" target="_blank" title="Privacy Policy">Política de Privacidade</a>
+                        <a href="{{ carserv.terms_of_service }}">Termos de Serviço</a>
                         <!-- <a href="">Help</a>
                         <a href="">FQAs</a> -->
                     </div>
