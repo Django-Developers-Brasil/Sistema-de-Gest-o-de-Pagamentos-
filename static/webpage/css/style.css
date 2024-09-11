@@ -194,6 +194,7 @@
 
 
 /*** About ***/
+/* Ajuste no Layout de Ancoragem */
 #Sobre{scroll-margin-top: 50px;}
 
 
@@ -220,6 +221,7 @@
     color: #FFFFFF !important;
 }
 
+/* Ajuste no Layout de Ancoragem */
 #Serviços{scroll-margin-top: 50px;}
 
 
@@ -255,7 +257,9 @@
     border-bottom-color: var(--primary);
 }
 
-#Agendamento{scroll-margin-top: 100px;}
+/* Ajuste no Layout de Ancoragem */
+#Agendamento{scroll-margin-top: 50px;}
+
 
 /*** Team ***/
 .team-item .team-overlay {
@@ -281,7 +285,9 @@
     background: var(--secondary)
 }
 
+/* Ajuste no Layout de Ancoragem */
 #Equipe{scroll-margin-top: 50px;}
+
 
 /*** Testimonial ***/
 .testimonial-carousel .owl-item .testimonial-text,
@@ -319,6 +325,7 @@
     border-color: var(--primary);
 }
 
+/* Ajuste no Layout de Ancoragem */
 #Depoimentos{scroll-margin-top: 50px;}
 
 
