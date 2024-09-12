@@ -172,3 +172,11 @@ LOGGING = {
         },
     },
 }
+
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': '127.0.0.1:8000',
+    }
+}

@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from .utils import get_carserv_data
+from django.views.decorators.cache import cache_page
 
+
+# Aplicando cache de 15 minutos (900 segundos) à view
+@cache_page(60 * 15)
 def Error(request):
     carserv = get_carserv_data()
     if not carserv:
