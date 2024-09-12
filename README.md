@@ -141,12 +141,12 @@
     [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
 
-### Se tiver problemas com o cache (atualização da página):
+14. **Se tiver problemas com o cache (atualização da página)**:
 
     ```python
     python manage.py collectstatic
     ```
-
+    **e/ou**
 
     ```python
     python manage.py shell
