@@ -4,11 +4,12 @@
     "pk": 1,
     "fields": {
         "company_name": "CarServ",
+        "endereco": "Rua 123 Joï¿½o Pessoa-PB",
         "logo": "",
         "email": "contato@django.dev.br",
-        "phone": "9.1234-1234",
-        "working_hours_weekdays": "Das 7h às 19h",
-        "working_hours_saturday": "das 7h às 13h",
+        "phone": "(83) 9.1234-1234",
+        "working_hours_weekdays": "Das 7h as 19h",
+        "working_hours_saturday": "das 7h as 13h",
         "twitter": "http://www.django.dev.br",
         "facebook": "http://www.django.dev.br",
         "linkedin": "http://www.django.dev.br",
@@ -42,7 +43,7 @@
         "color_light": null,
         "color_dark": null,
         "created_at": "2024-09-10T02:49:39.390Z",
-        "updated_at": "2024-09-10T02:49:39.391Z",
+        "updated_at": "2024-09-12T02:56:15.278Z",
         "deleted_at": null
     }
 }

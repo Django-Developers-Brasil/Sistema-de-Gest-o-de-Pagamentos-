@@ -5,6 +5,7 @@ from colorfield.fields import ColorField
 class CarServ(models.Model):
     # Informações da empresa
     company_name = models.CharField(max_length=255, verbose_name="Nome da Empresa")
+    endereco = models.CharField(max_length=255, verbose_name="Endereço da Empresa", null=True, blank=True)
     logo = models.ImageField(upload_to='carserv/images/', verbose_name="Logo da Empresa", null=True, blank=True)
     email = models.EmailField(verbose_name="Email da Empresa")
     phone = models.CharField(max_length=20, verbose_name="Telefone da Empresa")
