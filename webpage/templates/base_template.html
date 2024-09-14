@@ -31,9 +31,29 @@
 
     <!-- Template Stylesheet -->
     <link href="{% static 'webpage/css/style.css' %}" rel="stylesheet">
+
+    <!-- estilos do SweetAlert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
 </head>
 
 <body>
+
+    {% if messages %}
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                {% for message in messages %}
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: '{{ message.tags }}',
+                        title: '{{ message }}',
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                {% endfor %}
+            });
+        </script>
+    {% endif %}
     
     <!-- Spinner Start -->
     {% include 'base_template-components/spinner.html' %}
@@ -69,6 +89,9 @@
     <script src="{% static 'webpage/lib/tempusdominus/js/moment.min.js' %}"></script>
     <script src="{% static 'webpage/lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
     <script src="{% static 'webpage/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+
+    <!-- Js do SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="{% static 'webpage/js/main.js' %}"></script>
