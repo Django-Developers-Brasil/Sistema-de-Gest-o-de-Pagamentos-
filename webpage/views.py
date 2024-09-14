@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .utils import get_carserv_data
 from django.views.decorators.cache import cache_page
+from django.contrib import messages
 
 
 # Aplicando cache de 15 minutos (900 segundos) à view
@@ -18,7 +19,6 @@ def index(request):
         return render(request, '404.html', status=404)  # Renderiza a página 404
     
     if request.method == 'POST':
-        print('enviado')
         # Mesmo que tenhamos validação no frontend, sempre valide no backend também
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -28,9 +28,9 @@ def index(request):
 
         # Validação básica
         if not name or not email or not service or not date:
-            print('form vazio')     
+            messages.error(request, 'Por favor, preencha todos os campos obrigatórios.')
         else:
-            print(f'{name}, {email}, {service} e {date}')
+            messages.success(request, 'Obrigado pelo agendamento! Entraremos em contato em breve!')
             
     # Passa os dados para o template 'index.html'
     return render(request, 'index.html', {'carserv': carserv})
