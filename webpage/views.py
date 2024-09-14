@@ -3,6 +3,8 @@ from .utils import get_carserv_data
 from django.views.decorators.cache import cache_page
 from django.contrib import messages
 from django.template import loader
+from .forms import ContactForm
+from django.http import HttpResponse
 
 # Aplicando cache de 15 minutos (900 segundos) à view
 @cache_page(60 * 15)
@@ -35,5 +37,16 @@ def index(request):
     # Passa os dados para o template 'index.html'
     return render(request, 'index.html', {'carserv': carserv})
 
-def contact(request):
-    return render(request, 'contact.html')
+
+def contact_view(request):
+    success_message = False  # Inicialmente, não há mensagem de sucesso
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Processa o formulário (envio de e-mail ou salvar no banco de dados)
+            # Aqui você pode salvar os dados ou enviar um e-mail
+            success_message = True  # Define como verdadeiro para exibir o alerta
+    else:
+        form = ContactForm()
+
+    return render(request, 'contact.html', {'form': form, 'success_message': success_message})

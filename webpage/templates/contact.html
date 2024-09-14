@@ -29,4 +29,15 @@
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
+    {% if success_message %}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>            
+            Swal.fire({
+                title: "Obrigado!",
+                text: "Formulário enviado com sucesso.",
+                icon: "success",
+                confirmButtonText: "OK"
+            });
+        </script>
+    {% endif %}
 {% endblock %}
