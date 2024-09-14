@@ -10,40 +10,74 @@
             </div>
             <div class="col-lg-6">
                 <div class="bg-primary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
-                    <h1 class="text-white mb-4">Faça Sua Reserva</h1>
-                    <form>
+                 
+                    <form class="needs-validation" novalidate>
+                        
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" placeholder="Nome" style="height: 55px;">
+                                <input type="text" name="name" class="form-control border-0" placeholder="Nome" style="height: 55px;" required>
+                                <div class="invalid-feedback text-white">
+                                    Por favor, insira seu nome.
+                                </div>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control border-0" placeholder="Email" style="height: 55px;">
+                                <input type="email" name="email" class="form-control border-0" placeholder="Email" style="height: 55px;" required>
+                                <div class="invalid-feedback text-white">
+                                    Por favor, insira um email válido.
+                                </div>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <select class="form-select border-0" style="height: 55px;">
-                                    <option selected>Selecione um Serviço</option>
-                                    <option value="1">Service 1</option>
-                                    <option value="2">Service 2</option>
-                                    <option value="3">Service 3</option>
+                                <select name="service" class="form-select border-0" style="height: 55px;" required>
+                                    <option selected disabled value="">Selecione um Serviço</option>
+                                    <option value="1">Serviço 1</option>
+                                    <option value="2">Serviço 2</option>
+                                    <option value="3">Serviço 3</option>
                                 </select>
+                                <div class="invalid-feedback text-white">
+                                    Por favor, selecione um serviço.
+                                </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="date" id="date1" data-target-input="nearest">
-                                    <input type="text"
-                                        class="form-control border-0 datetimepicker-input"
-                                        placeholder="Escolha uma Data" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
+                                    <input type="text" name="date" class="form-control border-0 datetimepicker-input" placeholder="Escolha uma Data" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;" required>
+                                    <div class="invalid-feedback text-white">
+                                        Por favor, escolha uma data.
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control border-0" placeholder="Pedido Customizado"></textarea>
+                                <textarea name="message" class="form-control border-0" placeholder="Pedido Customizado"></textarea>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-secondary w-100 py-3" type="submit">Reserve Agora</button>
                             </div>
                         </div>
                     </form>
+                    
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Bootstrap form validation script -->
+<script>
+    (function() {
+        'use strict'
+
+        // Obtém todos os formulários que queremos aplicar estilos de validação personalizados do Bootstrap
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Faz um loop sobre eles e previne o envio
+        Array.from(forms).forEach(function(form) {
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+</script>
