@@ -1,0 +1,129 @@
+{% extends "base_template.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="col-lg-6 col-md-8 col-sm-10">
+      <h2 class="text-center mb-4">Entre em Contato Conosco!</h2>
+      <form style="border: 1px solid #ccc; padding: 20px; border-radius: 10px;">
+        <div class="mb-3">
+          <label for="nome" class="form-label fw-bold">Nome</label>
+          <input type="text" class="form-control" id="nome" placeholder="Seu nome" required autofocus minlength="2" maxlength="100">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label fw-bold">Email</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Seu email" required>
+          <div id="emailHelp" class="form-text">Nós nunca compartilharemos seu email com ninguém.</div>
+        </div>
+        <div class="mb-3">
+          <label for="telefone" class="form-label fw-bold">Telefone</label>
+          <div class="d-flex align-items-baseline">
+            <select class="form-select w-25 me-2" id="ddd" required>
+              <option value="11">11 (SP)</option>
+              <option value="12">12 (SP)</option>
+              <option value="13">13 (SP)</option>
+              <option value="14">14 (SP)</option>
+              <option value="15">15 (SP)</option>
+              <option value="16">16 (SP)</option>
+              <option value="17">17 (SP)</option>
+              <option value="18">18 (SP)</option>
+              <option value="19">19 (SP)</option>
+              <option value="21">21 (RJ)</option>
+              <option value="22">22 (RJ)</option>
+              <option value="24">24 (RJ)</option>
+              <option value="27">27 (ES)</option>
+              <option value="28">28 (ES)</option>
+              <option value="31">31 (MG)</option>
+              <option value="32">32 (MG)</option>
+              <option value="33">33 (MG)</option>
+              <option value="34">34 (MG)</option>
+              <option value="35">35 (MG)</option>
+              <option value="37">37 (MG)</option>
+              <option value="38">38 (MG)</option>
+              <option value="41">41 (PR)</option>
+              <option value="42">42 (PR)</option>
+              <option value="43">43 (PR)</option>
+              <option value="44">44 (PR)</option>
+              <option value="45">45 (PR)</option>
+              <option value="46">46 (PR)</option>
+              <option value="47">47 (SC)</option>
+              <option value="48">48 (SC)</option>
+              <option value="49">49 (SC)</option>
+              <option value="51">51 (RS)</option>
+              <option value="53">53 (RS)</option>
+              <option value="54">54 (RS)</option>
+              <option value="55">55 (RS)</option>
+              <option value="61">61 (DF)</option>
+              <option value="62">62 (GO)</option>
+              <option value="63">63 (TO)</option>
+              <option value="64">64 (GO)</option>
+              <option value="65">65 (MT)</option>
+              <option value="66">66 (MT)</option>
+              <option value="67">67 (MS)</option>
+              <option value="68">68 (AC)</option>
+              <option value="69">69 (RO)</option>
+              <option value="71">71 (BA)</option>
+              <option value="73">73 (BA)</option>
+              <option value="74">74 (BA)</option>
+              <option value="75">75 (BA)</option>
+              <option value="77">77 (BA)</option>
+              <option value="79">79 (SE)</option>
+              <option value="81">81 (PE)</option>
+              <option value="82">82 (AL)</option>
+              <option value="83" selected>83 (PB)</option>
+              <option value="84">84 (RN)</option>
+              <option value="85">85 (CE)</option>
+              <option value="86">86 (PI)</option>
+              <option value="87">87 (PE)</option>
+              <option value="88">88 (CE)</option>
+              <option value="89">89 (PI)</option>
+              <option value="91">91 (PA)</option>
+              <option value="92">92 (AM)</option>
+              <option value="93">93 (PA)</option>
+              <option value="94">94 (PA)</option>
+              <option value="95">95 (RR)</option>
+              <option value="96">96 (AP)</option>
+              <option value="97">97 (AM)</option>
+              <option value="98">98 (MA)</option>
+              <option value="99">99 (MA)</option>
+            </select>
+            <span>9.</span>
+            <input type="text" class="form-control w-25 mx-2" id="telefone1" maxlength="4" minlength="4" placeholder="0000" required>
+            <span>-</span>
+            <input type="text" class="form-control w-25 ms-2" id="telefone2" maxlength="4" minlength="4" placeholder="0000" required>
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="assunto" class="form-label fw-bold">Assunto</label>
+            <select class="form-select" id="assunto" required>
+              <option value="">Selecione o assunto</option>
+              <option value="diagnostico">Teste de Diagnóstico</option>
+              <option value="motor">Manutenção do Motor</option>
+              <option value="pneus">Troca de Pneus</option>
+              <option value="oleo">Troca de Óleo</option>
+              <option value="limpeza">Limpeza a Vácuo</option>
+              <option value="outros">Outros</option>
+              <option value="elogio">Elogio</option>
+              <option value="duvida">Dúvida</option>
+              <option value="sugestao">Sugestão</option>
+              <option value="reclamacao">Reclamação</option>
+              <option value="lgpd">LGPD</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="mensagem" class="form-label fw-bold">Mensagem</label>
+            <textarea class="form-control" id="mensagem" rows="4" placeholder="Sua mensagem" required minlength="10" maxlength="500"></textarea>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="termos" required>
+            <label class="form-check-label fw-bold" for="termos">
+              Concordo com os <a href="https://policies.google.com/terms" target="_blank">termos e condições</a>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
+      </div>
+    </div>  
+  
+  
+{% endblock %}
