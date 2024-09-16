@@ -23,9 +23,10 @@ from webpage.views import index, Error
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('webpage.urls')),    
+    path('', include('webpage.urls')),
+    path('', include('carservadmin.urls')),
 ]
 
-# Only add this when DEBUG is False (production)
+# Only add this when DEBUG is False (production)carservadminTest
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
