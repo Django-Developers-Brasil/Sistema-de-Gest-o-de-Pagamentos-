@@ -24,7 +24,7 @@ from webpage.views import index, Error
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('webpage.urls')),
-    path('', include('carservadmin.urls')),
+    path('carservadmin/', include('carservadmin.urls')),
 ]
 
 # Only add this when DEBUG is False (production)carservadminTest
