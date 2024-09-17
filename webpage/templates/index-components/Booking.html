@@ -70,23 +70,4 @@
 </div>
 
 <!-- Bootstrap form validation script -->
-<script>
-    (function() {
-        'use strict'
-
-        // Obtém todos os formulários que queremos aplicar estilos de validação personalizados do Bootstrap
-        const forms = document.querySelectorAll('.needs-validation')
-
-        // Faz um loop sobre eles e previne o envio
-        Array.from(forms).forEach(function(form) {
-            form.addEventListener('submit', function(event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
-
-                form.classList.add('was-validated')
-            }, false)
-        })
-    })()
-</script>
+{% include 'bootstrap-form-validation.html' %}
