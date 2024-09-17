@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .utils import get_carserv_data
 from django.views.decorators.cache import cache_page
 from django.contrib import messages
-
+from .models import Newsletter
+import re
 
 # Aplicando cache de 15 minutos (900 segundos) à view
 @cache_page(60 * 15)
@@ -35,6 +36,41 @@ def index(request):
             
     # Passa os dados para o template 'index.html'
     return render(request, 'index.html', {'carserv': carserv})
+
+# Função para validar formato do email
+def is_valid_email(email):
+    regex = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+    return re.match(regex, email) is not None
+
+
+def newsLetter(request):
+    carserv = get_carserv_data()
+    if not carserv:
+        return render(request, '404.html', status=404)  # Renderiza a página 404
+    
+    if request.method == 'POST':
+        email = request.POST.get('email')
+
+        # Verifica se o email foi submetido e se é válido
+        if email and is_valid_email(email):
+            try:
+                # Verifica se o email já está cadastrado
+                newsletter_entry, created = Newsletter.objects.get_or_create(email=email)
+                
+                if created:
+                    messages.success(request, 'Email cadastrado com sucesso!')
+                else:
+                    messages.warning(request, 'Email já cadastrado.')
+            except Exception as e:
+                messages.error(request, f'Ocorreu um erro ao tentar salvar o email: {e}')
+        else:
+            messages.error(request, 'Email inválido. Por favor, insira um email válido.')
+        
+        # Redireciona para a página de index (ou qualquer outra página)
+        return redirect('index')  # Substitua 'index' pelo nome correto da URL
+
+    return redirect('index')
+
 
 
 def Contact(request):
