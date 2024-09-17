@@ -42,5 +42,22 @@ def Contact(request):
     if not carserv:
         return render(request, '404.html', status=404)  # Renderiza a página 404
     
+    if request.method == 'POST':
+        # Mesmo que tenhamos validação no frontend, sempre valide no backend também
+        name = request.POST.get('nome')
+        email = request.POST.get('email')
+        ddd = request.POST.get('ddd')
+        prefixo = request.POST.get('prefixo')
+        sufixo = request.POST.get('sufixo')
+        assunto = request.POST.get('assunto')
+        mensagem = request.POST.get('mensagem')
+      
+        # Validação básica
+        if not name or not email or not assunto or not mensagem:
+            messages.error(request, 'Por favor, inform nome, email, assunto e sua mensgem.')
+        else:
+            messages.success(request, 'Obrigado pelo contato! Responderemos em breve!')
+    
+    
     # Passa os dados para o template 
     return render(request, 'contact.html', {'carserv': carserv})

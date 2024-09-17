@@ -5,20 +5,23 @@
 <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="col-lg-6 col-md-8 col-sm-10">
       <h2 class="text-center mb-4">Entre em Contato Conosco!</h2>
-      <form style="border: 1px solid #ccc; padding: 20px; border-radius: 10px;">
+      <form style="border: 1px solid #ccc; padding: 20px; border-radius: 10px;" 
+            method="POST" 
+            action="{% url 'contact' %}" >
+            {% csrf_token %}
         <div class="mb-3">
           <label for="nome" class="form-label fw-bold">Nome</label>
-          <input type="text" class="form-control" id="nome" placeholder="Seu nome" required autofocus minlength="2" maxlength="100">
+          <input type="text" class="form-control" name="nome" id="nome" placeholder="Seu nome" required autofocus minlength="2" maxlength="100">
         </div>
         <div class="mb-3">
           <label for="email" class="form-label fw-bold">Email</label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Seu email" required>
+          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Seu email" required>
           <div id="emailHelp" class="form-text">Nós nunca compartilharemos seu email com ninguém.</div>
         </div>
         <div class="mb-3">
           <label for="telefone" class="form-label fw-bold">Telefone</label>
           <div class="d-flex align-items-baseline">
-            <select class="form-select w-25 me-2" id="ddd" required>
+            <select class="form-select w-25 me-2" name="ddd" id="ddd" required>
               <option value="11">11 (SP)</option>
               <option value="12">12 (SP)</option>
               <option value="13">13 (SP)</option>
@@ -88,14 +91,14 @@
               <option value="99">99 (MA)</option>
             </select>
             <span>9.</span>
-            <input type="text" class="form-control w-25 mx-2" id="telefone1" maxlength="4" minlength="4" placeholder="0000" required>
+            <input type="text" class="form-control w-25 mx-2" name="prefixo" id="prefixo" maxlength="4" minlength="4" placeholder="0000" required>
             <span>-</span>
-            <input type="text" class="form-control w-25 ms-2" id="telefone2" maxlength="4" minlength="4" placeholder="0000" required>
+            <input type="text" class="form-control w-25 ms-2" name="sufixo" id="sufixo" maxlength="4" minlength="4" placeholder="0000" required>
           </div>
         </div>
         <div class="mb-3">
             <label for="assunto" class="form-label fw-bold">Assunto</label>
-            <select class="form-select" id="assunto" required>
+            <select class="form-select" name="assunto" id="assunto" required>
               <option value="">Selecione o assunto</option>
               <option value="diagnostico">Teste de Diagnóstico</option>
               <option value="motor">Manutenção do Motor</option>
@@ -112,7 +115,7 @@
           </div>
           <div class="mb-3">
             <label for="mensagem" class="form-label fw-bold">Mensagem</label>
-            <textarea class="form-control" id="mensagem" rows="4" placeholder="Sua mensagem" required minlength="10" maxlength="500"></textarea>
+            <textarea class="form-control" name="mensagem" id="mensagem" rows="4" placeholder="Sua mensagem" required minlength="10" maxlength="500"></textarea>
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="termos" required>
