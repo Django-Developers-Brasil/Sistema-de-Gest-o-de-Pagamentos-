@@ -6,22 +6,30 @@
     <div class="col-lg-6 col-md-8 col-sm-10">
       <h2 class="text-center mb-4">Entre em Contato Conosco!</h2>
       <form style="border: 1px solid #ccc; padding: 20px; border-radius: 10px;" 
+            class="needs-validation"
             method="POST" 
-            action="{% url 'contact' %}" >
+            action="{% url 'contact' %}" 
+            novalidate>
             {% csrf_token %}
         <div class="mb-3">
           <label for="nome" class="form-label fw-bold">Nome</label>
-          <input type="text" class="form-control" name="nome" id="nome" placeholder="Seu nome" required autofocus minlength="2" maxlength="100">
+          <input type="text" class="form-control" name="nome" id="nome" placeholder="Seu nome" required autofocus minlength="2" maxlength="100" required>
+          <div class="invalid-feedback">
+              Por favor, insira seu nome.
+          </div>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label fw-bold">Email</label>
           <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Seu email" required>
           <div id="emailHelp" class="form-text">Nós nunca compartilharemos seu email com ninguém.</div>
+          <div class="invalid-feedback">
+              Por favor, insira um email válido.
+          </div>
         </div>
         <div class="mb-3">
           <label for="telefone" class="form-label fw-bold">Telefone</label>
           <div class="d-flex align-items-baseline">
-            <select class="form-select w-25 me-2" name="ddd" id="ddd" required>
+            <select class="form-select w-25 me-2" name="ddd" id="ddd">
               <option value="11">11 (SP)</option>
               <option value="12">12 (SP)</option>
               <option value="13">13 (SP)</option>
@@ -91,9 +99,9 @@
               <option value="99">99 (MA)</option>
             </select>
             <span>9.</span>
-            <input type="text" class="form-control w-25 mx-2" name="prefixo" id="prefixo" maxlength="4" minlength="4" placeholder="0000" required>
+            <input type="text" class="form-control w-25 mx-2" name="prefixo" id="prefixo" maxlength="4" minlength="4" placeholder="0000">
             <span>-</span>
-            <input type="text" class="form-control w-25 ms-2" name="sufixo" id="sufixo" maxlength="4" minlength="4" placeholder="0000" required>
+            <input type="text" class="form-control w-25 ms-2" name="sufixo" id="sufixo" maxlength="4" minlength="4" placeholder="0000">
           </div>
         </div>
         <div class="mb-3">
@@ -112,21 +120,51 @@
               <option value="reclamacao">Reclamação</option>
               <option value="lgpd">LGPD</option>
             </select>
+            <div class="invalid-feedback">
+                Por favor, Selecione o assunto.
+            </div>
           </div>
           <div class="mb-3">
             <label for="mensagem" class="form-label fw-bold">Mensagem</label>
             <textarea class="form-control" name="mensagem" id="mensagem" rows="4" placeholder="Sua mensagem" required minlength="10" maxlength="500"></textarea>
+            <div class="invalid-feedback">
+                Por favor, escreva sua mensagem.
+            </div>
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="termos" required>
             <label class="form-check-label fw-bold" for="termos">
               Concordo com os <a href="https://policies.google.com/terms" target="_blank">termos e condições</a>
             </label>
+            <div class="invalid-feedback">
+                Por favor, leia e concorde com os termos e condições de uso e privacidade.
+            </div>
           </div>
           <button type="submit" class="btn btn-primary w-100">Enviar</button>
         </form>
       </div>
     </div>  
   
+    <!-- Bootstrap form validation script -->
+    <script>
+      (function() {
+          'use strict'
+
+          // Obtém todos os formulários que queremos aplicar estilos de validação personalizados do Bootstrap
+          const forms = document.querySelectorAll('.needs-validation')
+
+          // Faz um loop sobre eles e previne o envio
+          Array.from(forms).forEach(function(form) {
+              form.addEventListener('submit', function(event) {
+                  if (!form.checkValidity()) {
+                      event.preventDefault()
+                      event.stopPropagation()
+                  }
+
+                  form.classList.add('was-validated')
+              }, false)
+          })
+      })()
+    </script>
   
 {% endblock %}
