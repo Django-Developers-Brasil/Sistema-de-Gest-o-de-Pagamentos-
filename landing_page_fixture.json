@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "company_name": "CarServ",
-        "endereco": "Rua 123 Jo�o Pessoa-PB",
+        "endereco": "Rua 123 Joao Pessoa-PB",
         "logo": "",
         "email": "contato@django.dev.br",
         "phone": "(83) 9.1234-1234",
