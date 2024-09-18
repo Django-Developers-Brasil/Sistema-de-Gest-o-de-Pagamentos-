@@ -33,10 +33,14 @@
                 <h4 class="text-light mb-4">Novidades</h4>
                 <p>Cadastre seu email e fique por dentro das novidades e ofertas</p>
                 <div class="position-relative mx-auto" style="max-width: 400px;">
-
-                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Seu email">
-
-                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Inscrever-me</button>
+                    <form class="needs-validation" novalidate method="POST" action="{% url 'newsletter' %}" novalidate>
+                        {% csrf_token %}
+                        <input id="emailInput" name="email" class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email" placeholder="Seu email" required>
+                        <div class="invalid-feedback text-white">
+                            Por favor, insira um email válido.
+                        </div>
+                        <button class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" type="submit">Inscrever-me</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -64,3 +68,6 @@
         </div>
     </div>
 </div>
+
+<!-- Bootstrap form validation script -->
+{% include 'bootstrap-form-validation.html' %}
