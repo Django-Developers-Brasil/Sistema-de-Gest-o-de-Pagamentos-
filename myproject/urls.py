@@ -22,7 +22,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('c-panel/', admin.site.urls),
-    path('', include('webpage.urls')),    
+    path('', include('webpage.urls')),
+    path('carservadmin/', include('carservadmin.urls')),
 ]
 
 # Only add this when DEBUG is False (production)
