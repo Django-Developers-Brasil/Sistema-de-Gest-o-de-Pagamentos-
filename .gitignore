@@ -1,3 +1,10 @@
+# Esses arquivos podem causa merge conflito com o ambiente de produção
+nohup.out
+*.save
+myproject/.settings.py.swp
+settings.py
+myproject/settings.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
