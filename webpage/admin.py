@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CarServ
+from .models import CarServ, Newsletter
 import csv
 from django.http import HttpResponse
 
@@ -24,6 +24,16 @@ class ExportCsvMixin:
 
 @admin.register(CarServ)
 class CarServAdmin(admin.ModelAdmin, ExportCsvMixin):
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+    def has_add_permission(self, request):
+        return False
+
+    actions = ["export_as_csv"]
+
+@admin.register(Newsletter)
+class NewsletterAdmin(admin.ModelAdmin, ExportCsvMixin):
     def has_delete_permission(self, request, obj=None):
         return False
 

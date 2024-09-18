@@ -33,10 +33,10 @@
                 <h4 class="text-light mb-4">Novidades</h4>
                 <p>Cadastre seu email e fique por dentro das novidades e ofertas</p>
                 <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <form class="needs-validation" novalidate method="POST" action="{% url 'newsletter' %}">
+                    <form class="needs-validation" novalidate method="POST" action="{% url 'newsletter' %}" novalidate>
                         {% csrf_token %}
                         <input id="emailInput" name="email" class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email" placeholder="Seu email" required>
-                        <div class="invalid-feedback">
+                        <div class="invalid-feedback text-white">
                             Por favor, insira um email válido.
                         </div>
                         <button class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" type="submit">Inscrever-me</button>
@@ -70,22 +70,4 @@
 </div>
 
 <!-- Bootstrap form validation script -->
-<script>
-    (function() {
-        'use strict'
-
-        const forms = document.querySelectorAll('.needs-validation')
-
-        Array.from(forms).forEach(function(form) {
-            form.addEventListener('submit', function(event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
-
-                form.classList.add('was-validated')
-            }, false)
-        })
-    })()
-</script>
-
+{% include 'bootstrap-form-validation.html' %}

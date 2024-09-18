@@ -1,9 +1,9 @@
-from django.shortcuts import render,redirect
-from .utils import get_carserv_data
+from django.shortcuts import render, redirect
+from .utils import get_carserv_data, is_valid_email
 from django.views.decorators.cache import cache_page
 from django.contrib import messages
 from .models import Newsletter
-import re
+
 
 # Aplicando cache de 15 minutos (900 segundos) à view
 @cache_page(60 * 15)
@@ -15,7 +15,7 @@ def Error(request):
     return render(request, '404.html', {'carserv': carserv})
 
 
-def index(request):
+def Index(request):
     carserv = get_carserv_data()
     if not carserv:
         return render(request, '404.html', status=404)  # Renderiza a página 404
@@ -37,13 +37,8 @@ def index(request):
     # Passa os dados para o template 'index.html'
     return render(request, 'index.html', {'carserv': carserv})
 
-# Função para validar formato do email
-def is_valid_email(email):
-    regex = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
-    return re.match(regex, email) is not None
 
-
-def newsLetter(request):
+def NewsLetter(request):
     carserv = get_carserv_data()
     if not carserv:
         return render(request, '404.html', status=404)  # Renderiza a página 404
