@@ -1,0 +1,798 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 16, 2024 - 23:39:41
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+System check identified no issues (0 silenced).
+September 16, 2024 - 23:57:47
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2024 - 13:41:49
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+September 17, 2024 - 13:48:28
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2024 - 13:49:51
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2024 - 21:07:12
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2024 - 21:10:22
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+System check identified no issues (0 silenced).
+September 17, 2024 - 21:16:10
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+System check identified no issues (0 silenced).
+September 17, 2024 - 21:19:10
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+September 17, 2024 - 21:21:10
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/base.py", line 485, in check
+    all_issues = checks.run_checks(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/contrib/staticfiles/checks.py", line 9, in check_finders
+    finder_errors = finder.check()
+  File "/srv/carservenv/lib/python3.8/site-packages/django/contrib/staticfiles/finders.py", line 96, in check
+    if settings.STATIC_ROOT and os.path.abspath(
+  File "/usr/lib/python3.8/posixpath.py", line 374, in abspath
+    path = os.fspath(path)
+TypeError: expected str, bytes or os.PathLike object, not tuple
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/base.py", line 485, in check
+    all_issues = checks.run_checks(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/contrib/staticfiles/checks.py", line 9, in check_finders
+    finder_errors = finder.check()
+  File "/srv/carservenv/lib/python3.8/site-packages/django/contrib/staticfiles/finders.py", line 96, in check
+    if settings.STATIC_ROOT and os.path.abspath(
+  File "/usr/lib/python3.8/posixpath.py", line 374, in abspath
+    path = os.fspath(path)
+TypeError: expected str, bytes or os.PathLike object, not tuple
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/base.py", line 485, in check
+    all_issues = checks.run_checks(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/contrib/staticfiles/checks.py", line 9, in check_finders
+    finder_errors = finder.check()
+  File "/srv/carservenv/lib/python3.8/site-packages/django/contrib/staticfiles/finders.py", line 96, in check
+    if settings.STATIC_ROOT and os.path.abspath(
+  File "/usr/lib/python3.8/posixpath.py", line 374, in abspath
+    path = os.fspath(path)
+TypeError: expected str, bytes or os.PathLike object, not tuple
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/base.py", line 485, in check
+    all_issues = checks.run_checks(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/contrib/staticfiles/checks.py", line 9, in check_finders
+    finder_errors = finder.check()
+  File "/srv/carservenv/lib/python3.8/site-packages/django/contrib/staticfiles/finders.py", line 96, in check
+    if settings.STATIC_ROOT and os.path.abspath(
+  File "/usr/lib/python3.8/posixpath.py", line 374, in abspath
+    path = os.fspath(path)
+TypeError: expected str, bytes or os.PathLike object, not tuple
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2024 - 21:22:02
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2024 - 21:22:24
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2024 - 21:23:17
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2024 - 21:23:28
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2024 - 21:23:55
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2024 - 18:24:54
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2024 - 18:25:02
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2024 - 18:25:23
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+System check identified no issues (0 silenced).
+September 18, 2024 - 09:10:39
+Django version 4.2.15, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:9002/
+Quit the server with CONTROL-C.
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+  File "/srv/carservenv/lib/python3.8/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Error: That port is already in use.

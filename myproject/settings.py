@@ -32,12 +32,15 @@ DEBUG = os.getenv('DEBUG')
 
 # EM DESENVOLVIMENTO
 # ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['127.0.0.1']
+# ALLOWED_HOSTS = ['127.0.0.1']
 
 # EM PRODUÇÃO 
-# ALLOWED_HOSTS = ['https://carserv.django.dev.br']
-# CSRF_TRUSTED_ORIGINS = ['https://carserv.django.dev.br']
+ALLOWED_HOSTS = ['https://carserv.django.dev.br','127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://carserv.django.dev.br']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://carserv.django.dev.br',
+]
 
 # Application definition
 
@@ -123,32 +126,27 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
-USE_I18N = True
+# USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Media Files
 # https://docs.djangoproject.com/en/4.2/topics/files/
 
-MEDIA_URL = 'media/'
-
-MEDIA_ROOT = BASE_DIR / 'media'
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
 STATIC_URL = '/static/'
-
-
-# WINDOWS - Use as vars static dirs e root abaixo no Windows
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
+# STATIC_ROOT = os.path.join(BASE_DIR / 'staticfiles/')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
+    # os.path.join(BASE_DIR / 'static'),
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
 
 
 # Default primary key field type
