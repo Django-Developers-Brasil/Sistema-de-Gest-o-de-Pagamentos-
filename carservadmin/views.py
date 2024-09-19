@@ -1,5 +1,6 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import render
 
-# Create your views here.
-def carservadminTest(request):
-    return HttpResponse("<h1> Olá, esse é um teste para a rota carservadmin! </h1>")
+
+def Home(request):
+     
+     return render(request, 'home.html')
