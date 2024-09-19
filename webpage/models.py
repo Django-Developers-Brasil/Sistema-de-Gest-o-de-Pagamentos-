@@ -60,6 +60,11 @@ class CarServ(models.Model):
 
     def __str__(self):
         return self.company_name
+    
+class Newsletter(models.Model):
+    email = models.EmailField(verbose_name="Email do Cliente")
+    created_at = models.DateTimeField(auto_now_add=True)
 
-
+    def __str__(self):
+        return self.email
 

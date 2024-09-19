@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
     # My Apps
     'webpage',
+    'carservadmin',
 
     # Apps de Terceiros
     'colorfield',
