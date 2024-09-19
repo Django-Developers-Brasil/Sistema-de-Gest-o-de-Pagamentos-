@@ -22,7 +22,7 @@ from webpage.views import index, Error
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('c-panel/', admin.site.urls),
     path('', include('webpage.urls')),    
 ]
 
