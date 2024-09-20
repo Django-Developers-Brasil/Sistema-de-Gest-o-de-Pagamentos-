@@ -3,7 +3,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from .views import Index, Error, Contact, NewsLetter
 from ninja import NinjaAPI
-from .api import carserv_router
+from .api import carserv_router, newsletter_router
 
 
 # Criando a instância da API
@@ -11,6 +11,7 @@ api = NinjaAPI()
 
 # Registrando os routers
 api.add_router("/v1/", carserv_router)
+api.add_router("/v1/", newsletter_router)
 
 
 urlpatterns = [
