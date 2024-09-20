@@ -48,12 +48,26 @@
         </script>
     {% endif %}
 
+    <body class="layout-fixed sidebar-expand-lg bg-body-tertiary"> <!--begin::App Wrapper-->
+        <div class="app-wrapper"> 
+            
+            <!--begin::Header-->
+                {% include 'adminlte_components/nav.html' %}
+            <!--end::Header--> 
+            
+            <!--begin::Sidebar-->
+                {% include 'adminlte_components/aside.html' %}
+            <!--end::Sidebar--> 
 
+        {% block content %}
+            
+        {% endblock %}
 
-    {% block content %}
-        
-    {% endblock %}
+        <!--begin::Footer-->
+            {% include 'adminlte_components/footer.html' %}
+        <!--end::Footer-->
 
+    </div> <!--end::App Wrapper--> 
 
     <!-- Google reCaptcha -->
     <script src="https://www.google.com/recaptcha/api.js?render=6Lfk_fcpAAAAAGEGEQgZGCBVWXgYNdVmmaf4gzzy"></script>
