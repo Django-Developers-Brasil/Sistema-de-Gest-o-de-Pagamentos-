@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from django.templatetags.static import static
+from django.urls import reverse_lazy
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -64,11 +66,12 @@ INSTALLED_APPS = [
         
 ]
 
-UNFOLD = {
-    'TITLE': 'CarServ',  # Título do admin
-    'COLOR_DEFAULT': '#D81324',  # Cor padrão
-}
 
+UNFOLD = {
+    "SITE_TITLE": "CarServ",  # Título que aparece na tag <title> da página
+    "SITE_HEADER": "CarServ Admin",  # Título que aparece no cabeçalho lateral
+    "THEME": "light",  # Pode ser "light" ou "dark", escolha conforme preferência
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

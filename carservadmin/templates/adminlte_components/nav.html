@@ -13,18 +13,20 @@
             </li> <!--end::Fullscreen Toggle--> <!--begin::User Menu Dropdown-->
             <li class="nav-item dropdown user-menu"> 
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> 
-                    <span class="d-none d-md-inline">Olá, Primeiro Nome</span> 
+                    <span class="d-none d-md-inline">Bem-vindo, {{ nome|capfirst }}!</span> 
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end"> <!--begin::User Image-->
                     <li class="user-header text-bg-primary"> 
+                        <img src="{{ foto }}" class="rounded-circle shadow" alt="User Image">
+
                         <p>
-                            Nome Completo
-                            <small>email</small>
+                            {{ nome|capfirst }} {{ sobrenome|capfirst }}
+                            <small>{{ email }}</small>
                         </p>
                     </li> <!--end::User Image-->  <!--begin::Menu Footer-->
                     <li class="user-footer"> 
                         <a href="#" class="btn btn-default btn-flat">Profile</a> 
-                        <a href="#" class="btn btn-default btn-flat float-end">Sign out</a> 
+                        <a href="{% url 'logout' %}" class="btn btn-default btn-flat float-end">Sair</a> 
                     </li> <!--end::Menu Footer-->
                 </ul>
             </li> <!--end::User Menu Dropdown-->
