@@ -17,7 +17,9 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end"> <!--begin::User Image-->
                     <li class="user-header text-bg-primary"> 
-                        <img src="{{ foto }}" class="rounded-circle shadow" alt="User Image">
+                        {% if foto %}
+                            <img src="{{ foto }}" class="rounded-circle shadow" alt="User Image">
+                        {% endif %}
 
                         <p>
                             {{ nome|capfirst }} {{ sobrenome|capfirst }}

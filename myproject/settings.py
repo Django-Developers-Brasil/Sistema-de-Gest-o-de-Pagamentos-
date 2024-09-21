@@ -63,6 +63,7 @@ INSTALLED_APPS = [
 
     # Apps de Terceiros
     'colorfield',
+    'tinymce',
         
 ]
 
@@ -72,6 +73,7 @@ UNFOLD = {
     "SITE_HEADER": "CarServ Admin",  # Título que aparece no cabeçalho lateral
     "THEME": "light",  # Pode ser "light" ou "dark", escolha conforme preferência
 }
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
