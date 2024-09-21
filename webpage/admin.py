@@ -104,6 +104,8 @@ class CarServAdmin(admin.ModelAdmin, ExportCsvMixin):
 class NewsletterAdmin(admin.ModelAdmin, ExportCsvMixin):
     list_display = ['email', 'created_at','api_icon']
     search_fields = ['email']
+    list_filter = ['email', 'created_at']
+    list_filter_submit = True 
 
     actions = ["export_as_csv"]
 
