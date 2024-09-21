@@ -45,6 +45,9 @@ CSRF_TRUSTED_ORIGINS = [
 # Application definition
 
 INSTALLED_APPS = [
+    "unfold",
+    "unfold.contrib.filters",
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,7 +61,14 @@ INSTALLED_APPS = [
 
     # Apps de Terceiros
     'colorfield',
+        
 ]
+
+UNFOLD = {
+    'TITLE': 'CarServ',  # Título do admin
+    'COLOR_DEFAULT': '#D81324',  # Cor padrão
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

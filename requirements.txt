@@ -1,3 +1,6 @@
+# https://unfoldadmin.com/docs/filters/introduction/
+django-unfold==0.39.0
+
 # https://django-ninja.dev/
 django-ninja==1.3.0
 
