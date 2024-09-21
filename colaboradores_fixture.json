@@ -1,0 +1,18 @@
+[
+{
+    "model": "carservadmin.colaboradores",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "foto": "colaboradores/fotos/photo-removebg-preview.png",
+        "matricula": "CS1234",
+        "telefone_fixo": "",
+        "telefone_celular": "83998052853",
+        "endereco": "Rua 1",
+        "bairro": "centro",
+        "cidade": "Joao Pessoa",
+        "estado": "PB",
+        "cep": "57035212"
+    }
+}
+]
