@@ -28,3 +28,15 @@ def newsletter_get_all(request):
     newsletter_objects = Newsletter.objects.all().values()
     return list(newsletter_objects)
 
+# Novo endpoint para obter um newsletter por ID
+@newsletter_router.get("/newsletter/getByid/{newsletter_id}", tags=["newsletter"], auth=staff_only)
+def newsletter_get_by_id(request, newsletter_id: int):
+    try:
+        newsletter = Newsletter.objects.get(id=newsletter_id)
+        return {
+            "id": newsletter.id,
+            "email": newsletter.email,
+            "created_at": newsletter.created_at,
+        }
+    except Newsletter.DoesNotExist:
+        raise HttpError(404, "Newsletter não encontrado")
