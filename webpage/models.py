@@ -61,10 +61,18 @@ class CarServ(models.Model):
     def __str__(self):
         return self.company_name
     
+    class Meta:
+        verbose_name = "Webpage"  # Nome no singular
+        verbose_name_plural = "Webpage"  # Nome no plural
+    
 class Newsletter(models.Model):
     email = models.EmailField(verbose_name="Email do Cliente")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.email
+    
+    class Meta:
+        verbose_name = "Newsletter"  # Nome no singular
+        verbose_name_plural = "Newsletter"  # Nome no plural
 
