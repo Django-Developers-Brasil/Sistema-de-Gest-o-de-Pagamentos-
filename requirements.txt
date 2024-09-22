@@ -1,5 +1,5 @@
-# https://pypi.org/project/django-ckeditor-5/
-django-ckeditor-5==0.2.13
+# https://github.com/jazzband/django-tinymce
+django-tinymce==4.1.0
 
 # https://unfoldadmin.com/docs/filters/introduction/
 django-unfold==0.39.0

@@ -15,8 +15,8 @@ class Clientes(models.Model):
     nome_completo = models.CharField(max_length=255, verbose_name="Nome Completo")
     foto = models.ImageField(upload_to='colaboradores/fotos/', blank=True, null=True, verbose_name="Foto")
     email = models.EmailField(unique=True, verbose_name="E-mail")
-    telefone_fixo = models.CharField(max_length=15, blank=True, verbose_name="Telefone Fixo")
-    telefone_celular = models.CharField(max_length=15, verbose_name="Celular")
+    telefone_fixo = models.CharField(max_length=22, blank=True, verbose_name="Telefone Fixo")
+    telefone_celular = models.CharField(max_length=22, verbose_name="Celular")
     endereco = models.CharField(max_length=255, verbose_name="Endereço")
     bairro = models.CharField(max_length=100, verbose_name="Bairro")
     cidade = models.CharField(max_length=100, verbose_name="Cidade")
@@ -57,8 +57,8 @@ class Colaboradores(models.Model):
     matricula = models.CharField(max_length=20, unique=True, verbose_name="Matrícula")
 
     # Telefones
-    telefone_fixo = models.CharField(max_length=15, blank=True, verbose_name="Telefone Fixo")
-    telefone_celular = models.CharField(max_length=15, verbose_name="Celular")
+    telefone_fixo = models.CharField(max_length=22, blank=True, verbose_name="Telefone Fixo")
+    telefone_celular = models.CharField(max_length=22, verbose_name="Celular")
 
     # Endereço completo no padrão brasileiro
     endereco = models.CharField(max_length=255, verbose_name="Endereço")

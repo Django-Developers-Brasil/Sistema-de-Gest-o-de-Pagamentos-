@@ -1,0 +1,165 @@
+{% extends "base_adminlte.html" %}
+{% load static %}
+
+{% block content %}
+
+
+        <!--begin::App Main-->
+        <main class="app-main"> 
+            <!--begin::App Content Header-->
+            <div class="app-content-header"> <!--begin::Container-->
+                <div class="container-fluid"> <!--begin::Row-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3 class="mb-0">Clientes</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-end">
+                                <li class="breadcrumb-item"><a href="{% url 'home' %}">Início</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Clientes
+                                </li>
+                            </ol>
+                        </div>
+                    </div> <!--end::Row-->
+                </div> <!--end::Container-->
+            </div> <!--end::App Content Header--> 
+            
+            <!--begin::App Content-->
+            <div class="app-content"> <!--begin::Container-->
+                <div class="container-fluid"> <!--begin::Row-->
+                    
+                    <div class="row justify-content-center" style="background-color: whitesmoke;">
+                        <div class="col-12 col-md-8">
+                            <table id="clientes-tbl" class="display table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Foto</th>
+                                        <th>Nome</th>
+                                        <th>Celular</th>
+                                        <th>Email</th>
+                                        <th>cidade</th>
+                                        <th>Editar</th>
+                                        <th>Apagar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for cliente in clientes %}
+                                    <tr>
+                                        {% if cliente.foto %}
+                                            <td>
+                                                <img src="{{ cliente.foto.url }}" alt="{{ cliente.nome_completo }}" class="rounded-circle" style="width: 30px; height: 30px;">
+                                            </td>
+                                        {% else %}
+                                            <td>
+                                                <span class="material-symbols-outlined">
+                                                    account_circle_off
+                                                </span>
+                                            </td>
+                                        {% endif %}
+
+                                        <td>
+                                            <a href="{% url 'cliente_detail' cliente.id %}" data-bs-toggle="tooltip" title="Mais Informações">
+                                                {{ cliente.nome_completo }}
+                                            </a>
+                                        </td>
+                                        
+                                        <td>
+                                            <a href="https://api.whatsapp.com/send?phone={{ cliente.telefone_celular }}" 
+                                            target="_blank"
+                                            data-bs-toggle="tooltip" 
+                                            title="Falar no WhatsApp!">
+                                                {{ cliente.telefone_celular }}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" onclick="copiarParaAreaDeTransferencia('{{ cliente.email }}'); return false;">
+                                                {{ cliente.email }}
+                                            </a>
+                                        </td>                                        
+                                        <td>{{ cliente.cidade }} - {{ cliente.estado}}</td>
+                                        <td>
+                                            <a href="#" data-bs-toggle="tooltip" title="Editar">
+                                                <span class="material-symbols-outlined muted-icon-edit">
+                                                    edit_note
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td> 
+                                            <a href="#" data-bs-toggle="tooltip" title="Excluir">
+                                                <span class="material-symbols-outlined muted-icon-delete">
+                                                    delete_forever
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> <!--end::Container-->
+            </div> <!--end::App Content-->
+        </main> <!--end::App Main--> 
+
+        <!-- DataTables CSS -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.css">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+        <!-- DataTables JS -->
+        <script src="https://cdn.datatables.net/2.1.7/js/dataTables.js"></script>
+
+        <!-- Script para inicializar DataTables com tradução -->
+        <script>
+            $(document).ready(function() {
+                $('#clientes-tbl').DataTable({
+                    language: {
+                        "lengthMenu": "Mostrar _MENU_ registros por página",
+                        "zeroRecords": "Nenhum registro encontrado",
+                        "info": "Mostrando _START_ até _END_ de _TOTAL_ registros",
+                        "infoEmpty": "Nenhum registro disponível",
+                        "infoFiltered": "(filtrado de _MAX_ registros no total)",
+                        "paginate": {
+                            "first": "Primeiro",
+                            "last": "Último",
+                            "next": "Próximo",
+                            "previous": "Anterior"
+                        },
+                        "search": "Buscar:",
+                        "loadingRecords": "Carregando...",
+                        "processing": "Processando..."
+                    }
+                });
+            });
+        </script>
+       
+       <script>
+        function copiarParaAreaDeTransferencia(texto) {
+                // Cria um elemento temporário de input
+                var inputTemp = document.createElement('input');
+                // Define o valor do input com o texto a ser copiado
+                inputTemp.value = texto;
+                // Adiciona o input temporário ao corpo do documento
+                document.body.appendChild(inputTemp);
+                // Seleciona o conteúdo do input
+                inputTemp.select();
+                // Executa o comando de cópia
+                document.execCommand('copy');
+                // Remove o input temporário do documento
+                document.body.removeChild(inputTemp);
+                
+                // Mostra o SweetAlert com uma notificação de sucesso
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Email copiado para a área de transferência!',
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+            }
+        </script>
+        
+    
+    {% endblock %}

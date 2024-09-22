@@ -13,6 +13,9 @@
         gtag('config', 'G-9PQCYHCFQQ');
     </script>
 
+    <!-- Google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>CarServ - Painel do Usuário</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -26,6 +29,40 @@
     <link rel="stylesheet" href="{% static 'carservadmin/css/adminlte.css' %}"><!--end::Required Plugin(AdminLTE)--><!-- apexcharts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css" integrity="sha256-4MX+61mt9NVvvuPjUWdUdyfZfxSB1/Rf9WtqRHgG5S0=" crossorigin="anonymous"><!-- jsvectormap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css" integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4=" crossorigin="anonymous">
+
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+     <!-- DataTables  -->
+     <style>
+        /* Definir os ícones como "muted" por padrão */
+        .muted-icon-edit {
+            color: gray; /* ou use outra cor suave */
+            transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+        }
+    
+        /* Remover o "muted" quando passar o mouse */
+        .muted-icon-edit:hover {
+            color: blue; /* Ou a cor que preferir */
+        }
+
+        .muted-icon-delete {
+            color: gray; /* ou use outra cor suave */
+            transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+        }
+    
+        /* Remover o "muted" quando passar o mouse */
+        .muted-icon-delete:hover {
+            color: red; /* Ou a cor que preferir */
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+    </style>
+
+
 </head> <!--end::Head--> <!--begin::Body-->
 
 
@@ -289,6 +326,18 @@
          );
          sparkline3.render();
      </script> <!--end::Script-->
+
+     <!--Bootstrap::Tooltip-->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
+    <!-- Js do SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
  </body><!--end::Body-->
  
  </html>
