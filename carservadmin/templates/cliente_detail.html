@@ -41,12 +41,36 @@
                                     <div class="row text-center m-1" style="height: 100%;">
 
                                         <div class="p-2"> 
-                                            <img class="img-fluid rounded-circle" src="{{ cliente.foto.url }}" alt="Foto de {{ cliente.nome_completo }}"> 
+                                            {% if cliente.foto %}
+                                            <td>
+                                                <img src="{{ cliente.foto.url }}" alt="Foto de {{ cliente.nome_completo }}" class="img-fluid rounded-circle" >
+                                            </td>
+                                        {% else %}
+                                            <td>
+                                                <span class="material-symbols-outlined text-muted">
+                                                    account_circle_off
+                                                </span>
+                                            </td>
+                                        {% endif %}
+                                            
                                             <p class="h4"><strong>{{ cliente.nome_completo }}</strong></p>
-                                            <div class="fs-8 small">Cliente deste {{ cliente.created_at|date:"d M y" }}</div>
+                                            <div class="fs-8 small">Cliente desde {{ cliente.created_at|date:"d M y" }}</div>
+                                            <p class="d-flex align-items-baseline justify-content-center"> <!-- Adiciona flexbox e alinha os itens à linha de base -->
+                                                <a href="#" data-bs-toggle="tooltip" title="Editar">
+                                                    <span class="material-symbols-outlined muted-icon-edit">
+                                                        edit_note
+                                                    </span>
+                                                </a>
+                                                <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#myModal{{ cliente.id }}">
+                                                    <span class="material-symbols-outlined muted-icon-delete" data-bs-toggle="tooltip" title="Excluir">
+                                                        delete_forever
+                                                    </span>
+                                                </a>
+                                            </p>
+                                            
                                         </div>
                                             <hr>
-                                        <div class="p-2 text-start p-4">
+                                        <div class="text-start mt-0 p-4">
                                             
                                             <p>
                                                 <img src="{% static 'carservadmin/img/whatsapp.png' %}" 
@@ -98,10 +122,10 @@
                             <!-- Primeira Coluna dentro da Primeira Linha -->
                             <div class="col-md-6">
                                 <div class="p-3">
-                                    <div class="g-4 mb-4  text-dark">
+                                    <div class="g-4 text-dark">
                                         
                                         <!-- Info Boxes Style 2 -->
-                                        <div class="info-box mb-3 text-bg-warning"> 
+                                        <div class="info-box  text-bg-warning"> 
                                             <span class="info-box-icon"> 
                                                 <i class="nav-icon bi bi-wrench"></i> 
                                             </span>
@@ -121,7 +145,7 @@
                                 <div class="p-3">
                                     
                                     <!-- Info Boxes Style 2 -->
-                                    <div class="info-box mb-3 text-bg-success"> 
+                                    <div class="info-box text-bg-success"> 
                                         <span class="info-box-icon"> 
                                             <i class="nav-icon bi bi-credit-card-fill"></i>
                                         </span>
@@ -140,7 +164,7 @@
                         <div class="row ">
                             <div class="col-12">
                                 <div class="p-3">
-                                    <div class="info-box mb-3 bg-white"> 
+                                    <div class="info-box bg-white"> 
                                         <img class="img-fluid" 
                                         src="{% static 'carservadmin/img/mapa.png' %}" 
                                         alt="mapa"
@@ -150,11 +174,38 @@
                             </div>
                         </div>
 
+                    
                         
                     </div>
                 </div>
             </div>
-                
+            
+            <!-- The Modal -->
+            <div class="modal" id="myModal{{ cliente.id }}">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+              
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title text-center">
+                        <img src="{% static 'carservadmin/img/warning.png' %}" style="width: 24px; height: 24px" alt="">&nbsp;&nbsp;
+                        <b>Cuidado!</b>
+                        <br> Esta operação não poderá ser desfeita!</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+              
+                   <!-- Modal body -->
+                <div class="modal-body">
+                    <p>Tem certeza de que quer excluir definitivamente o registro de <b>{{ cliente.nome_completo }}</b>?</p>
+                    <p class="d-flex align-content-center"> <!-- Adiciona flexbox e centraliza o conteúdo -->
+                        <form method="POST" action="{% url 'cliente_delete' cliente.id %}">
+                            {% csrf_token %}
+                            <center>
+                                <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Sim! Excluir </button>
+                            </center>
+                        </form>
+                    </p>
+                </div>
         
         </main> <!--end::App Main--> 
 
