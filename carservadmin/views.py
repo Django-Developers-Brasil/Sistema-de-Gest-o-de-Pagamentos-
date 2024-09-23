@@ -9,6 +9,7 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.contrib import messages
 
+
 @staff_member_required
 def Home(request):
     
@@ -32,8 +33,10 @@ def Home(request):
 
 
 def Logout(request):
-    logout(request)
-    return redirect('/c-panel/login/') 
+    logout(request)    
+    return redirect('/carservadmin/')
+    
+    
 
 
 @staff_member_required
