@@ -38,12 +38,11 @@ def Logout(request):
 
 @staff_member_required
 def clientes_view(request):
-    # Pega todos os clientes usando ORM
-    clientes = Clientes.objects.all()
-
     # Pega o contexto do usuário e colaborador
     context = get_user_context(request)
 
+    # Pega todos os clientes usando ORM
+    clientes = Clientes.objects.all()
     # Adiciona a lista de clientes ao contexto
     context['clientes'] = clientes
 
@@ -51,5 +50,12 @@ def clientes_view(request):
 
 
 def cliente_detail(request, id):
+
+    context = get_user_context(request)
+
+    # Pega o cliente usando ORM pelo ID
     cliente = get_object_or_404(Clientes, id=id)
-    return render(request, 'cliente_detail.html', {'cliente': cliente})
+     # Adiciona o cliente ao contexto
+    context['cliente'] = cliente
+
+    return render(request, 'cliente_detail.html', context)

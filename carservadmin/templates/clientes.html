@@ -15,8 +15,8 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-end">
-                                <li class="breadcrumb-item"><a href="{% url 'home' %}">Início</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">
+                                <li class="breadcrumb-item small"><a href="{% url 'home' %}">Início</a></li>
+                                <li class="breadcrumb-item active small" aria-current="page">
                                     Clientes
                                 </li>
                             </ol>
@@ -36,8 +36,19 @@
                                     <tr>
                                         <th>Foto</th>
                                         <th>Nome</th>
-                                        <th>Celular</th>
-                                        <th>Email</th>
+                                        <th>
+                                            Celular&nbsp;&nbsp;
+                                            <img src="{% static 'carservadmin/img/whatsapp.png' %}" 
+                                                class="rounded-circle shadow" 
+                                                style="width: 20px; height: 20px" alt="WhatsApp logo">
+                                        </th>
+                                        <th>
+                                            Email&nbsp;&nbsp;
+                                            <img src="{% static 'carservadmin/img/content_copy.png' %}" 
+                                                class="rounded-circle shadow" 
+                                                style="width: 20px; height: 20px" alt="Copiar para a área de transferência">
+                                            </span>
+                                        </th>
                                         <th>cidade</th>
                                         <th>Editar</th>
                                         <th>Apagar</th>
@@ -73,7 +84,7 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="#" onclick="copiarParaAreaDeTransferencia('{{ cliente.email }}'); return false;">
+                                            <a href="#" onclick="copiarParaAreaDeTransferencia('{{ cliente.email }}'); return false;" data-bs-toggle="tooltip" title="Copiar email">
                                                 {{ cliente.email }}
                                             </a>
                                         </td>                                        

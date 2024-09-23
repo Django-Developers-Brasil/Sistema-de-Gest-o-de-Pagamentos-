@@ -1,0 +1,149 @@
+{% extends "base_adminlte.html" %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+        <!--begin::App Main-->
+        <main class="app-main"> 
+            <!--begin::App Content Header-->
+            <div class="app-content-header"> <!--begin::Container-->
+                <div class="container-fluid"> <!--begin::Row-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3 class="mb-0">Cliente</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-end">
+                                <li class="breadcrumb-item small"><a href="{% url 'home' %}">Início</a></li>
+                                <li class="breadcrumb-item small"><a href="{% url 'clientes' %}">Clientes</a></li>
+                                <li class="breadcrumb-item active small" aria-current="page">
+                                    {{ cliente.nome_completo }}
+                                </li>
+                            </ol>
+                        </div>
+                    </div> <!--end::Row-->
+                </div> <!--end::Container-->
+            </div> <!--end::App Content Header--> 
+            
+            
+
+            <div class="container">
+                <div class="row">
+                    <!-- Coluna da Esquerda -->
+                    <div class="col-md-4">
+                        <div class="p-3 bg-light">
+                            <!-- Conteúdo da coluna da esquerda -->
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div class="row text-center m-1" style="height: 100%;">
+
+                                        <div class="p-2"> 
+                                            <img class="img-fluid rounded-circle" src="{{ cliente.foto.url }}" alt="Foto de {{ cliente.nome_completo }}"> 
+                                            <p class="h4"><strong>{{ cliente.nome_completo }}</strong></p>
+                                            <!-- <div class="fs-8 small">Cliente deste</div> -->
+                                        </div>
+
+                                        <div class="p-2 text-start p-4">
+                                            
+                                            <p>
+                                                <img src="{% static 'carservadmin/img/whatsapp.png' %}" 
+                                                class="rounded-circle shadow" 
+                                                style="width: 20px; height: 20px" alt="WhatsApp logo">&nbsp;&nbsp;{{ cliente.telefone_celular }}
+                                            </p>
+                                            <p>
+                                                <i class="fas fa-phone"></i>&nbsp;&nbsp;{{ cliente.telefone_fixo }}
+                                            </p>
+                                            <p>
+                                                <i class="fas fa-envelope"></i>&nbsp;&nbsp;{{ cliente.email }}
+                                            </p>
+                                            <p>
+                                                <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;
+                                                {{ cliente.endereco }}, 
+                                                {{ cliente.bairro }}, 
+                                                {{ cliente.cidade }},
+                                                {{ cliente.estado }}.
+                                                CEP:&nbsp; {{ cliente.cep }}
+                                            </p>
+                                            <p>{{ cliente.obs |safe}}</p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Coluna da Direita -->
+                    <div class="col-md-8">
+                        <!-- Primeira Linha na Coluna da Direita -->
+                        <div class="row">
+                            <!-- Primeira Coluna dentro da Primeira Linha -->
+                            <div class="col-md-6">
+                                <div class="p-3">
+                                    <div class="g-4 mb-4  text-dark">
+                                        
+                                        <!-- Info Boxes Style 2 -->
+                                        <div class="info-box mb-3 text-bg-warning"> 
+                                            <span class="info-box-icon"> 
+                                                <i class="nav-icon bi bi-wrench"></i> 
+                                            </span>
+                                            <div class="info-box-content"> 
+                                                <span class="info-box-text">Serviços</span> 
+                                                <span class="info-box-number">6</span> 
+                                            </div> <!-- /.info-box-content -->
+                                        </div> 
+                                        <!-- /.info-box -->
+
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Segunda Coluna dentro da Primeira Linha -->
+                            <div class="col-md-6">
+                                <div class="p-3">
+                                    
+                                    <!-- Info Boxes Style 2 -->
+                                    <div class="info-box mb-3 text-bg-success"> 
+                                        <span class="info-box-icon"> 
+                                            <i class="nav-icon bi bi-credit-card-fill"></i>
+                                        </span>
+                                        <div class="info-box-content"> 
+                                            <span class="info-box-text">Pagamentos</span>
+                                             <span class="info-box-number">R$ 1.000,00</span> 
+                                        </div> <!-- /.info-box-content -->
+                                    </div> 
+                                    <!-- /.info-box -->
+
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Segunda Linha na Coluna da Direita -->
+                        <div class="row ">
+                            <div class="col-12">
+                                <div class="p-3">
+                                    <div class="info-box mb-3 bg-white"> 
+                                        <img class="img-fluid" 
+                                        src="{% static 'carservadmin/img/mapa.png' %}" 
+                                        alt="mapa"
+                                        style="width: 100%; height: auto"> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+                
+        
+        </main> <!--end::App Main--> 
+
+        
+        
+    
+    {% endblock %}
