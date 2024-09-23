@@ -97,11 +97,43 @@
                                             </a>
                                         </td>
                                         <td> 
-                                            <a href="#" data-bs-toggle="tooltip" title="Excluir">
-                                                <span class="material-symbols-outlined muted-icon-delete">
+                                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#myModal{{ cliente.id }}">
+                                                <span class="material-symbols-outlined muted-icon-delete" data-bs-toggle="tooltip" title="Excluir">
                                                     delete_forever
                                                 </span>
                                             </a>
+
+                                                                                        
+                                              <!-- The Modal -->
+                                              <div class="modal" id="myModal{{ cliente.id }}">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                              
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                      <h4 class="modal-title text-center">
+                                                        <img src="{% static 'carservadmin/img/warning.png' %}" style="width: 24px; height: 24px" alt="">&nbsp;&nbsp;
+                                                        <b>Cuidado!</b>
+                                                        <br> Esta operação não poderá ser desfeita!</h4>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+                                              
+                                                   <!-- Modal body -->
+                                                <div class="modal-body">
+                                                    <p>Tem certeza de que quer excluir definitivamente o registro de <b>{{ cliente.nome_completo }}</b>?</p>
+                                                    <p class="d-flex align-content-center"> <!-- Adiciona flexbox e centraliza o conteúdo -->
+                                                        <form method="POST" action="{% url 'cliente_delete' cliente.id %}">
+                                                            {% csrf_token %}
+                                                            <center>
+                                                                <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Sim! Excluir </button>
+                                                            </center>
+                                                        </form>
+                                                    </p>
+                                                </div>
+                                              
+                                                  </div>
+                                                </div>
+                                              </div>
                                         </td>
                                     </tr>
                                     {% endfor %}

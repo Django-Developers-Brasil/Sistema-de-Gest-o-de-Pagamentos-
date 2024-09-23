@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import date
 from tinymce.models import HTMLField
+from django.utils import timezone
 
 
 class Clientes(models.Model):
@@ -33,6 +34,10 @@ class Clientes(models.Model):
     data_nascimento = models.DateField(verbose_name="Data de Nascimento")
     genero = models.CharField(max_length=1, choices=GENERO_CHOICES, verbose_name="Gênero")
     obs = HTMLField(verbose_name="Observações")
+
+    created_at = models.DateTimeField(auto_now_add=True, null=True) # remover o null true antes do migrate em produção
+    updated_at = models.DateTimeField(auto_now=True,null=True)
+    deleted_at = models.DateTimeField(null=True)
 
     def idade(self):
         hoje = date.today()

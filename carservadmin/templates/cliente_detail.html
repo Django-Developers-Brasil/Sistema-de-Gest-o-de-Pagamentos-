@@ -43,31 +43,46 @@
                                         <div class="p-2"> 
                                             <img class="img-fluid rounded-circle" src="{{ cliente.foto.url }}" alt="Foto de {{ cliente.nome_completo }}"> 
                                             <p class="h4"><strong>{{ cliente.nome_completo }}</strong></p>
-                                            <!-- <div class="fs-8 small">Cliente deste</div> -->
+                                            <div class="fs-8 small">Cliente deste {{ cliente.created_at|date:"d M y" }}</div>
                                         </div>
-
+                                            <hr>
                                         <div class="p-2 text-start p-4">
                                             
                                             <p>
                                                 <img src="{% static 'carservadmin/img/whatsapp.png' %}" 
                                                 class="rounded-circle shadow" 
-                                                style="width: 20px; height: 20px" alt="WhatsApp logo">&nbsp;&nbsp;{{ cliente.telefone_celular }}
+                                                style="width: 20px; height: 20px" alt="WhatsApp logo">&nbsp;&nbsp;
+                                                <a href="https://api.whatsapp.com/send?phone={{ cliente.telefone_celular }}" 
+                                                target="_blank"
+                                                data-bs-toggle="tooltip" 
+                                                title="Falar no WhatsApp!">
+                                                    {{ cliente.telefone_celular }}
+                                                </a>
                                             </p>
                                             <p>
                                                 <i class="fas fa-phone"></i>&nbsp;&nbsp;{{ cliente.telefone_fixo }}
                                             </p>
                                             <p>
-                                                <i class="fas fa-envelope"></i>&nbsp;&nbsp;{{ cliente.email }}
+                                                <i class="fas fa-envelope"></i>&nbsp;&nbsp;
+                                                <a href="#" 
+                                                    onclick="copiarParaAreaDeTransferencia('{{ cliente.email }}'); return false;" 
+                                                    data-bs-toggle="tooltip" title="Copiar email">
+                                                    {{ cliente.email }}
+                                                </a>
                                             </p>
                                             <p>
                                                 <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;
-                                                {{ cliente.endereco }}, 
-                                                {{ cliente.bairro }}, 
-                                                {{ cliente.cidade }},
-                                                {{ cliente.estado }}.
-                                                CEP:&nbsp; {{ cliente.cep }}
+                                                <a href="https://www.google.com/maps/place/{{ cliente.endereco }}+{{cliente.bairro }}+{{cliente.cidade }}+{{ cliente.estado }}+{{ cliente.cep }}" 
+                                                    target="_blank"
+                                                    data-bs-toggle="tooltip" title="Ver no Google Maps">
+                                                    {{ cliente.endereco }}, 
+                                                    {{ cliente.bairro }}, 
+                                                    {{ cliente.cidade }},
+                                                    {{ cliente.estado }}.
+                                                    CEP:&nbsp; {{ cliente.cep }}
+                                                </a>
                                             </p>
-                                            <p>{{ cliente.obs |safe}}</p>
+                                            <p class="border border-start">{{ cliente.obs |safe}}</p>
                                             
                                         </div>
                                     </div>
@@ -143,7 +158,31 @@
         
         </main> <!--end::App Main--> 
 
-        
+        <script>
+            function copiarParaAreaDeTransferencia(texto) {
+                    // Cria um elemento temporário de input
+                    var inputTemp = document.createElement('input');
+                    // Define o valor do input com o texto a ser copiado
+                    inputTemp.value = texto;
+                    // Adiciona o input temporário ao corpo do documento
+                    document.body.appendChild(inputTemp);
+                    // Seleciona o conteúdo do input
+                    inputTemp.select();
+                    // Executa o comando de cópia
+                    document.execCommand('copy');
+                    // Remove o input temporário do documento
+                    document.body.removeChild(inputTemp);
+                    
+                    // Mostra o SweetAlert com uma notificação de sucesso
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Email copiado para a área de transferência!',
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                }
+            </script>
         
     
     {% endblock %}

@@ -47,6 +47,7 @@ class ClientesAdmin(admin.ModelAdmin):
         ('Observações', {
             'fields': ('obs',)
         }),
+       
     )
 
    
